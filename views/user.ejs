@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../public/index/index.css" />
+    <link rel="stylesheet"  href="/public/partials/nav.css" />
+    <link rel="stylesheet"  href="/public/user/user-page.css" />
+
+</head>
+<body>
+    <% include partials/nav.ejs %>
+
+   <div class="user-container">
+
+    
+    <div><%= message %></div>
+    <div><%= message2 %></div>
+ 
+    <div class="user-actvities">
+        <hr>
+        <button class="tablink" onclick="openPage('User-Details', this, 'red')" id="defaultOpen">User-Details</button>
+        <button class="tablink" onclick="openPage('Request', this, 'green')">Request</button>
+        <button class="tablink" onclick="openPage('Uploads', this, 'blue')">Uploads</button>
+        <button class="tablink" onclick="openPage('Events', this, 'orange')">Events</button>
+        <button class="tablink" onclick="openPage('Upload', this, 'grey')">Upload/Rent</button>
+        <button class="tablink" onclick="openPage('LinkAccount', this, 'grey')">Link Another Account</button>
+
+<!-- content -->
+
+<div id="User-Details" class="tabcontent">
+        <h3>User-Details</h3>
+        <div class="user-info">
+            <p>fullname: <%= user.local.fullname %></p>
+            <p>email: <%= user.local.email %></p>
+            <p>Address1: <%= user.userDetails.address1 %></p>
+            <p>Address2: <%= user.userDetails.address2 %></p>
+            <p>phone number: <%= user.userDetails.phone %></p>
+            <p>Next of Kin: <%= user.userDetails.nextOfKin %></p>
+            <p>Next of Kin Phone Number: <%= user.userDetails.nextOfKinPhone %></p>
+            <p>Date of Birth: <%= user.userDetails.dateOfBirth %></p>
+        </div>
+            <button class="update-info"><a href="user-details">UPDATE</a></button>
+</div>
+      
+      <div id="Request" class="tabcontent">
+        <h3>Request</h3>
+        <p>No request yet</p> 
+      </div>
+      
+      <div id="Uploads" class="tabcontent">
+        <h3>Uploads</h3>
+
+
+        <div class="request-container">
+        <p>No uploads yet</p>
+
+            <a href="username/upload-car"><button>Upload Car</button></a>
+        </div>
+
+
+      </div>
+      
+    <div id="Events" class="tabcontent">
+        <h3>Events</h3>
+        <p>No events yet</p>
+    </div>
+
+    <div id="Upload" class="tabcontent">
+        <h3>Upload/Rent</h3>
+
+        <button class="rent-btn">RENT A CAR</button>
+        <button class="upload-btn">UPLOAD A CAR</button>
+    </div>
+
+
+    <div id="LinkAccount" class="tabcontent">
+        <h3>Link an Account</h3>
+
+        <div id="accounts">
+
+       
+
+        <div class="facebook-connect">
+            <% if (!user.facebook.id) { %>
+                <p>No facebook profile linked</p>
+            <% } else { %>
+                <p>Your facebook ID is</p>
+                <p><%= user.facebook.id %></p>
+            <% } %>
+            <div class="fb-link">
+                <a href="/carme/facebook"><button class="rent-btn">FACEBOOK</button></a>
+                <button class="unlink-btn">UNLINK</button>
+            </div>
+        </div>
+
+        <div class="google-connect">
+            <% if (!user.google.id) { %>
+                <p>No google profile linked</p>
+            <% } else { %>
+                <p>Your google ID is</p>
+                <p><%= user.google.id %></p>
+            <% } %>
+
+            <div class="fb-link">
+                <a href="/carme/google"><button class="upload-btn">GOOGLE</button></a>
+                <button class="unlink-btn">UNLINK</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+<!-- tab-end -->
+    </div>
+
+
+
+   </div>
+    <script src="/public/user/user-page.js"></script>
+</body>
+</html>

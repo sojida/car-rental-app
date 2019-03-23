@@ -1,0 +1,27 @@
+#request-container{
+    text-align: center;
+}
+
+.upd-user-det, .req-btn{
+    margin: 10px auto;
+    width: 80%;
+    height: 50px;
+    background-color: forestgreen;
+    color: white;
+    outline: none;
+    border: 1px solid forestgreen;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 1px #aaaaaa;
+    font-size: 1.5rem;
+}
+
+.pse-det{
+    height: 2.2rem;
+    width: 80%;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 3px solid lightgrey;
+    outline: none;
+    font-size: 1.5rem;
+}

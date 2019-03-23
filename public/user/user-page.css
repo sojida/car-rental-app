@@ -1,0 +1,61 @@
+.user-container{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+#accounts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.facebook-connect {
+  border: 1px solid blue;
+  padding : 5px;
+}
+
+.google-connect {
+  border: 1px solid orange;
+  padding : 5px;
+}
+
+
+
+/******/
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 16.666666667%;
+   
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: auto;
+    width: 90vw;
+    margin: 10px auto;
+  }
+  
+  #User-Details {background-color: red;}
+  #Request {background-color: green;}
+  #Uploads {background-color: blue;}
+  #Events {background-color: orange;}
+  #Upload {background-color: grey;}
+  #LinkAccount {background-color: grey;}
+

@@ -1,0 +1,29 @@
+#accept-container{
+    text-align: center;
+}
+
+.btn-req{
+    width: 80%;
+    margin-top: 10px;
+    height: 50px;
+    background-color: forestgreen;
+    color: white;
+    outline: none;
+    border: 1px solid forestgreen;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 1px #aaaaaa;
+    font-size: 1.5rem;
+}
+
+.btn-req-rej{
+    width: 80%;
+    margin-top: 10px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    outline: none;
+    border: 1px solid coral;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 1px #aaaaaa;
+    font-size: 1.5rem;
+}

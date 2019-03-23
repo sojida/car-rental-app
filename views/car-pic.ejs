@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/index/index.css" />
+    <link rel="stylesheet"  href="/public/partials/nav.css" />
+    <link rel="stylesheet"  href="/public/accept/accept.css" />
+
+</head>
+<body>
+    <% include partials/nav.ejs %>
+
+<form action="/carme/car" method="POST" enctype="multipart/form-data" style="text-align:center">
+
+<p>Upload car pictures:
+    <input type="file" name="car-pic" class="carpic" multiple >
+</p>
+
+    <input type="submit" value="Upload">
+</form>
+
+<hr>
+
+<div style = "display: grid; grid-template-columns: 1fr 1fr 1fr; grid-column-gap: 5px;grid-row-gap: 5px ">
+    <%file.forEach(function(file){ %>
+    <div style="height: 500px; width: 1fr; padding: 5px " >
+        <img src="/image/<%= file.filename %>" style="width:100%; height:100%">
+    </div>
+    <%})%>
+</div>
+
+</body>
+</html>

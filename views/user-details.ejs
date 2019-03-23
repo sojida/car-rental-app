@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/index/index.css" />
+    <link rel="stylesheet"  href="/public/partials/nav.css" />
+    <link rel="stylesheet"  href="/public/user-details/user-details.css" />
+
+</head>
+<body>
+    <% include partials/nav.ejs %>
+
+<div id="user-det-container">
+    <h1>Update Profile</h1>
+<form action="username/user-details" method="POST">
+    <p>Full Name:
+    <input type="text" name="fullname" class="user-det" placeholder="Full Name" required value="<%= user.local.fullname %>"> <br>
+    </p>
+
+    <p>Username:
+    <input type="text" name="username" class="user-det" placeholder="Username" required value="<%= user.local.username %>"> <br>
+    </p>
+
+    <p>Email:
+    <input type="text" name="email" class="user-det" placeholder="yourmail@example.com" required value="<%= user.local.email %>"> <br>
+    </p>
+
+    <p>Address 1:
+    <input type="text" name="address1" class="user-det" placeholder="Address1" required value="<%= user.userDetails.address1 %>"> <br>
+    </p>
+
+    <p>Address 2:
+    <input type="text" name="address2" class="user-det" placeholder="Address2" required value="<%= user.userDetails.address2 %>"> <br>
+    </p>
+
+    <p>Phone:
+    <input type="text" name="phone" class="user-det" placeholder="Phone Number" required value="<%= user.userDetails.phone %>"> <br>
+    </p>
+
+    <p>Next of Kin:
+    <input type="text" name="nextOfKin" class="user-det" placeholder="Next of Kin" required value="<%= user.userDetails.nextOfKin %>"> <br>
+    </p>
+
+    <p>Next of Kin Number:
+    <input type="text" name="nextOfKinPhone" class="user-det" placeholder="Next of Kin Num" required value="<%= user.userDetails.nextOfKinPhone %>"> <br>
+    </p>
+    
+    <p>Date of Birth:
+    <input type="date" name="dateOfBirth" class="user-det" placeholder="Date of Birth" required value="<%= user.userDetails.dateOfBirth %>"> <br>
+    </p>
+
+    <button type="submit" class="upd-btn">UPDATE</button>
+
+</form>
+</div>
+
+    
+</body>
+</html>

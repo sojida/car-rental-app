@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Me Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../public/index/index.css" />
+    <link rel="stylesheet"  href="/public/partials/nav.css" />
+    <link rel="stylesheet"  href="/public/register/register.css" />
+
+
+</head>
+<body>
+<% include partials/nav.ejs %>
+
+<div class="reg-form">
+
+
+    <div class="third-party-reg">
+        <div>
+            Register with
+        </div>
+
+        <div class="fb-container">
+            <button class="btn-reg-fb">facebook</button>
+        </div>
+
+        <div>
+            OR
+        </div>
+
+        <div class="gm-container">
+            <button class="btn-reg-gm">gmail</button>
+        </div>
+
+</div>
+
+
+<form action="/carme/register" method="POST" class="register-form">
+  
+    <p class="err-msg"><%= message %></p>
+
+    <input type="text" name="fullname" class="reg" placeholder="Fullname" required> <br>
+
+    <input type="text" name="username" class="reg" placeholder="Username" required> <br>
+
+    <input type="text" name="email" class="reg" placeholder="youremail@example.com" required> <br>
+
+    <input type="password" name="password" class="reg" placeholder="Password" required> <br>
+
+    <button class="btn-submit-reg">Register</button>
+
+
+
+</form>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/public/index/index.css" />
+    <link rel="stylesheet"  href="/public/partials/nav.css" />
+    <link rel="stylesheet"  href="/public/request/request.css">
+
+</head>
+<body>
+    <% include partials/nav.ejs %>
+
+    <div id="request-container">
+
+        <form action="">
+        <div class="user-details">
+            user-details from DB
+            else <br>
+            <button class="upd-user-det">UPDATE DETAILS</button>
+        </div>
+
+        <div class="purpose-details">
+            <hr>
+            <input type="text" name="purpose" class="pse-det" placeholder="purpose" required> <br>
+            <input type="text" name="day-required" class="pse-det" placeholder="Date Required" required> > <br>
+            <input type="text" name="time-of-rent" class="pse-det" placeholder="Time" required>> <br>
+            <input type="text" name="day-of-return" class="pse-det" placeholder="Date Returned" required> > <br>
+            <input type="text" name="time-of-return" class="pse-det" placeholder="Time"  required>> <br>
+            <input type="text" name="negotiate-price" class="pse-det" placeholder="Negotiate Price" required>> <br>
+
+            <button type="submit" class="req-btn">REQUEST</button>
+        </div>
+    </form>
+    </div>
+
+    
+
+</body>
+</html>

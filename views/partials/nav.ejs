@@ -1,0 +1,22 @@
+
+<nav id="navbar">
+    <div class="logo">
+        <h1>LOGO</h1>
+    </div>
+
+    <% if (!user) {%>
+    <div class="login">
+        <h4><a href="/carme/login">Login</a></h4>
+    </div>
+
+    <div class="register">
+        <h4><a href="/carme/register">Register</a></h4>
+    </div>
+    <% } else {%>
+     <div class="logout">
+        <h4><a href="/carme/logout">Logout</a></h4>
+    </div>  
+    <% } %>
+
+
+</nav>

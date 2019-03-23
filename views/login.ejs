@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Me Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../public/index/index.css" />
+    <link rel="stylesheet"  href="/public/partials/nav.css" />
+    <link rel="stylesheet"  href="/public/login/login.css" />
+
+
+</head>
+<body>
+<% include partials/nav.ejs %>
+
+<div class="reg-form">
+   
+
+        <div class="third-party-reg">
+            <div class="reg-txt">
+                Login with
+            </div>
+    
+            <div class="fb-container">
+                <a href="/carme/facebook"><button class="btn-reg-fb">facebook</button></a>
+            </div>
+    
+            <div class="reg-txt">
+                OR
+            </div>
+    
+            <div class="gm-container">
+                    <a href="/carme/google"><button class="btn-reg-gm">gmail</button></a>
+            </div>
+    
+    </div>
+    
+    
+    <form action="/carme/login" method="POST" class="register-form">
+        
+        <p class="err-msg"><%= message %></p>
+
+        <input type="text" name="email" class="reg" placeholder="Email"> <br>
+        
+        <input type="password" name="password" class="reg" placeholder="Password"> <br>
+        
+        <button class="btn-submit-reg">Login</button>
+    
+    
+    
+    </form>
+    
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+.requestAdContainer{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+    width: 80vw;
+    margin: 20px auto;
+    box-shadow: 1px 5px 10px 5px #aaaaaa;
+    background-color: #fff;
+  
+   
+}
+
+.requestAdContainer p{
+    margin: 2px;
+}
+
+
+.car-details{
+    display: grid;
+
+}
+
+.car-request-functions{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr
+    
+}
+
+.req-functions{
+    text-align: center;
+    margin: 2px;
+   
+}
+
+.view, .request, .negotiate{
+    padding: 2px;
+    background-color: burlywood;
+    
+}
+
+.car-image{
+    display: grid;
+    justify-content: center;
+    
+}
+
+.car-img{
+    display: grid;
+    border: 1px solid black;
+    text-align: center;
+    
+   
+}
